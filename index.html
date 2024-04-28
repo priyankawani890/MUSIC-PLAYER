@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- All Songs Section -->
+        <section id="songs" class="first-section">
+            <h2>All Songs</h2>
+            <div id="genre-filter">
+                <label for="genre-select">Filter by Genre:</label>
+                <select id="genre-select" class="genre-option">
+                    <option value="">All</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                </select>
+            </div>
+            <ul id="songs-list">
+                <!-- Songs will be added from js -->
+            </ul>
+        </section>
+
+        <!-- Song Card Section -->
+        <section class="second-section">
+            <div class="top-bar">
+                <i class="material-icons">expand_more</i>
+                <span>Now Playing</span>
+                <i class="material-icons">more_horiz</i>
+            </div>
+            <div class="img-area">
+                <img src="" alt="">
+            </div>
+            <div class="song-details">
+                <p class="name"></p>
+                <p class="artist"></p>
+            </div>
+            <div class="progress-area">
+                <div class="progress-bar">
+                    <audio id="main-audio" src=""></audio>
+                </div>
+                <div class="song-timer">
+                    <span class="current-time">0:00</span>
+                    <span class="max-duration">0:00</span>
+                </div>
+            </div>
+            <div class="controls">
+                <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                <i id="prev" class="material-icons">skip_previous</i>
+                <div class="play-pause">
+                    <i class="material-icons play">play_arrow</i>
+                </div>
+                <i id="next" class="material-icons">skip_next</i>
+                <i id="more-music" class="material-icons">queue_music</i>
+            </div>
+        </section>
+
+        <!-- Music List -->
+        <div class="music-list">
+            <div class="header">
+                <div class="row">
+                    <i class="material-icons">queue_music</i>
+                    <span>Music list</span>
+                </div>
+                <i id="close" class="material-icons">close</i>
+            </div>
+            <ul>
+                <!-- List of songs in the playlist -->
+            </ul>
+        </div>
+
+     <!-- Toggle button for changing mode-->
+
+      <div class="section">
+        <div class="toggle-container" class="dark-mode">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span id="theme-label" title="Change Mode"></span>
+        </div>
+         <!--     Playlist Section    -->
+        <section id="playlist">
+            <h2>Playlists</h2>
+            <div id="current-playlist">
+                <h3>Current Playlist</h3>
+                <ul id="current-playlist-list">
+                    <!-- Current playlist will be added dynamically here -->
+                </ul>
+            </div>
+            <div id="all-playlists">
+                <h3>All Playlists</h3>
+                <ul id="all-playlists-list">
+                    <!-- All playlists will be added dynamically here -->
+                </ul>
+            </div>
+            <input type="text" id="new-playlist-name" placeholder="Enter playlist name">
+            <button id="create-playlist-btn">Create Playlist</button>
+           <div>
+            <p>Playlist 1</p>
+            <p>Playlist 2</p>
+            <p>Playlist 3</p>
+            <p>Playlist 4</p>
+            <p>Playlist 5</p>
+            <p>Playlist 6</p>
+            </div>
+        </section>
+    </div>
+</div>
+ 
+    
+    <script src="js/music-list.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
